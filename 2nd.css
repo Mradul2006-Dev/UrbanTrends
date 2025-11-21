@@ -1,0 +1,276 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: hotpink;
+    --primary-dark: deeppink;
+    --secondary: dodgerblue;
+    --dark: navy;
+    --light: whitesmoke;
+    --text: black;
+    --border: lightgray;
+    --success: green;
+    --warning: orange;
+    --amazon-orange: orange;
+    --amazon-blue: darkblue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+/* HEADER */
+header {
+    background: darkblue;
+    color: white;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+}
+
+.nav-container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* SEARCH */
+.search-bar {
+    flex: 1;
+    display: flex;
+    max-width: 900px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid lightgray;
+    border-radius: 4px 0 0 4px;
+    background: white;
+}
+
+.search-bar button {
+    background: orange;
+    border: none;
+    padding: 0 25px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.nav-icon {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: orange;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+
+.product-container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 60px 1fr 350px;
+    gap: 20px;
+}
+
+
+.image-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    background: whitesmoke;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: orange;
+}
+
+
+.main-image-section {
+    border: 1px solid lightgray;
+    padding: 20px;
+    background: white;
+}
+
+.main-image {
+    height: 550px;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoom-hint {
+    color: gray;
+    text-align: center;
+}
+
+
+.product-info {
+    padding: 0 20px;
+}
+
+.product-title {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.price-section {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.deal-badge {
+    background: red;
+    padding: 4px 8px;
+    color: white;
+}
+
+.price-amount {
+    font-size: 28px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.save-amount {
+    color: red;
+}
+
+
+.buy-box {
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+}
+
+.stock-status {
+    color: green;
+    font-weight: bold;
+}
+
+
+.btn-add-cart {
+    background: yellow;
+    border: 1px solid gold;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-buy-now {
+    background: orange;
+    border: 1px solid orangered;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.reviews-section {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.review-card {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mini-product-card {
+    border: 1px solid lightgray;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.mini-product-card:hover {
+    background: whitesmoke;
+}
+
+
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+    }
+}
+    .nav-icons {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .logo {
+        order: 1;
+    }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Track Order - UrbanTrends</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .container {
+    max-width: 1000px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px lightgray;
+}
+
+.tracking-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background: white;
+}
+
+button.btn {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: hotpink;   
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.timeline {
+    margin-top: 16px;
+    padding-left: 10px;
+}
+
+.step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: lightgray;
+    margin-top: 6px;
+}
+
+.dot.active {
+    background: hotpink;             
+    box-shadow: 0 0 0 6px lightpink; 
+}
+
+.step-title {
+    font-weight: bold;
+}
+
+.small {
+    font-size: 13px;
+    color: gray;
+}
+
+.track-list {
+    margin-top: 14px;
+}
+
+.map-placeholder {
+    background: whitesmoke;
+    height: 220px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div><i class="fas fa-phone"></i> Customer Care: 1800-123-4567</div>
+      <div><a href="index.html">Home</a></div>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">UrbanTrends</a>
+        <div class="search-bar"><input placeholder="Search..."><button><i class="fas fa-search"></i></button></div>
+        <div class="nav-icons"><div class="nav-icon"><a href="my-account.html"><i class="far fa-user"></i></a></div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Track Your Order</h2>
+      <p class="small">Enter your tracking number or order ID to see the latest delivery updates.</p>
+
+      <div class="tracking-input">
+        <input id="trackingNumber" type="text" placeholder="Enter tracking number (e.g. SV123456)" />
+        <button id="trackBtn" class="btn"><i class="fas fa-search"></i> Track</button>
+      </div>
+
+      <div id="trackResult" style="display:none;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-weight:700;">Order: <span id="orderId"></span></div>
+            <div class="small">Estimated delivery: <span id="eta"></span></div>
+          </div>
+          <div class="small">Carrier: <strong>ShopVerse Logistics</strong></div>
+        </div>
+
+        <div class="timeline" id="timeline">
+
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="section-title small" style="margin-bottom:8px;">Live location (simulated)</div>
+          <div class="map-placeholder">Map preview unavailable in demo</div>
+        </div>
+
+        <div style="margin-top:16px;" class="small">
+          If you need help, call <strong>1800-123-4567</strong> or <a href="my-account.html">Contact support</a>.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer style="margin-top:40px; padding:30px 20px; background:var(--dark); color:#fff;">
+    <div class="container">© 2025 UrbanTrends</div>
+  </footer>
+
+ 
+ 
+</body>
+</html>

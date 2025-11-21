@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Account - UrbannTrends</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .container {
+        max-width: 1100px;
+        margin: 28px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        background-color: white;
+        border-radius: 12px;
+        padding: 16px;
+    }
+
+    .main {
+        background-color: white;
+        border-radius: 12px;
+        padding: 18px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 8px;
+        border-radius: 8px;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 6px;
+    }
+
+    .nav-link.active {
+        background-color: rgb(255, 0, 123);
+        color: white;
+        font-weight: bold;
+    }
+
+    .profile {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: gray;
+    }
+
+    .section-title {
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .order-card {
+        border: 1px solid lightgray;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .address-card {
+        border: 1px dashed lightgray;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: rgb(255, 0, 102);
+        color: white;
+    }
+
+    .small {
+        font-size: 13px;
+        color: gray;
+    }
+</style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div><i class="fas fa-phone"></i> Customer Care: 1800-123-4567</div>
+      <div><a href="index.html">Home</a></div>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">UrbanTrends</a>
+        <div class="search-bar"><input placeholder="Search..."><button><i class="fas fa-search"></i></button></div>
+        <div class="nav-icons"><div class="nav-icon"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+   
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">JS</div>
+        <div>
+          <div style="font-weight:800;">John Sharma</div>
+          <div class="small">john.sharma@example.com</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#" class="nav-link active" data-tab="orders"><i class="fas fa-box"></i> Orders</a>
+        <a href="#" class="nav-link" data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a>
+        <a href="#" class="nav-link" data-tab="payments"><i class="fas fa-credit-card"></i> Payment methods</a>
+        <a href="#" class="nav-link" data-tab="wishlist"><i class="far fa-heart"></i> Wish list</a>
+        <a href="#" class="nav-link" data-tab="profile"><i class="fas fa-user"></i> Profile details</a>
+        <a href="#" class="nav-link" data-tab="security"><i class="fas fa-lock"></i> Change password</a>
+        <a href="index.html" class="nav-link" style="margin-top:8px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    
+    <section class="main">
+      
+      <div id="orders" class="tab-content">
+        <div class="section-title">Recent Orders</div>
+
+        <div class="order-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:700;">Order #SV123456</div>
+              <div class="small">Placed on 10 Nov 2025</div>
+              <div class="small">Items: Samsung Galaxy S24 Ultra (256GB)</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-weight:700;">₹89,999</div>
+              <div class="small">Status: <strong style="color:var(--success);">Delivered</strong></div>
+              <div style="margin-top:8px;">
+                <a class="btn btn-secondary" href="tracking.html" style="text-decoration:none;">Track</a>
+                <br>
+                <br>
+                <a class="btn btn-primary" href="billing.html" style="text-decoration:none;">Invoice</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:700;">Order #SV000001</div>
+              <div class="small">Placed on 07 Oct 2025</div>
+              <div class="small">Items: Nike Air Max</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-weight:700;">₹3,499</div>
+              <div class="small">Status: <strong style="color:#faa905;" >Out for delivery</strong></div>
+              <br>
+              <div style="margin-top:8px;">
+                <a class="btn btn-secondary" href="tracking.html" style="text-decoration:none;">Track</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="addresses" class="tab-content" style="display:none;">
+        <div class="section-title">Saved Addresses</div>
+
+        <div class="address-card">
+          <div style="display:flex; justify-content:space-between;">
+            <div>
+              <div style="font-weight:700;">Home</div>
+              <div class="small">John Sharma, 12/A, MG Road, Mumbai, Maharashtra - 400001</div>
+            </div>
+            <div style="text-align:right;">
+              <button class="btn btn-secondary" onclick="editAddress()">Edit</button>
+              <button class="btn btn-primary" onclick="setDefault()">Set default</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="address-card">
+          <div style="display:flex; justify-content:space-between;">
+            <div>
+              <div style="font-weight:700;">Office</div>
+              <div class="small">Acme Corp, 76, Bandra East, Mumbai - 400051</div>
+            </div>
+            <div style="text-align:right;">
+              <button class="btn btn-secondary" onclick="editAddress()">Edit</button>
+              <button class="btn btn-secondary" onclick="removeAddress()">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;">
+          <button class="btn btn-primary" onclick="addAddress()">Add new address</button>
+        </div>
+      </div>
+
+    
+      <div id="payments" class="tab-content" style="display:none;">
+        <div class="section-title">Payment Methods</div>
+
+        <div class="address-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:700;">Visa •••• 4242</div>
+              <div class="small">Expires 10/27</div>
+            </div>
+            <div>
+              <button class="btn btn-secondary">Edit</button>
+              <button class="btn btn-secondary">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <button class="btn btn-primary" onclick="addPayment()">Add new card / UPI</button>
+        </div>
+      </div>
+
+      <div id="wishlist" class="tab-content" style="display:none;">
+        <div class="section-title">Wish list</div>
+        <div class="small">You have 3 items in your wish list.</div>
+
+        <div style="margin-top:12px;">
+          <div class="order-card">Samsung Galaxy S24 Ultra — <a href="2nd.html">View</a> • <button class="btn btn-primary">Add to cart</button></div>
+          <div class="order-card">Nike Air Max 270 — <a href="cart.html">View</a> • <button class="btn btn-primary">Add to cart</button></div>
+        </div>
+      </div>
+
+    
+      <div id="profile" class="tab-content" style="display:none;">
+        <div class="section-title">Profile details</div>
+        <form id="profileForm">
+          <label>Full name <input type="text" id="pname" value="John Sharma"></label>
+          <label>Email <input type="email" id="pemail" value="john.sharma@example.com"></label>
+          <label>Phone <input type="tel" id="pphone" value="+91 98765 43210"></label>
+          <div style="margin-top:12px;"><button class="btn btn-primary" type="button" onclick="saveProfile()">Save changes</button></div>
+        </form>
+      </div>
+
+      
+      <div id="security" class="tab-content" style="display:none;">
+        <div class="section-title">Change password</div>
+        <form id="pwdForm">
+          <label>Current password <input type="password" id="curPwd"></label>
+          <label>New password <input type="password" id="newPwd"></label>
+          <label>Confirm new password <input type="password" id="confirmPwd"></label>
+          <div style="margin-top:12px;"><button class="btn btn-primary" type="button" onclick="changePassword()">Change password</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-top:40px; padding:30px 20px; background:var(--dark); color:#fff;">
+    <div class="container">© 2025 UrbanTrends</div>
+  </footer>
+
+  
+</body>
+</html>
